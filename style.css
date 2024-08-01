@@ -1,0 +1,164 @@
+
+body{
+    padding: 0;
+    background-color: #07F3FB;
+    margin: 0;
+}
+
+.play-show{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.play-game-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    animation: scaling 2s infinite;
+}
+
+.play-game-section::before{
+    width: 20px;
+    height: 20px;
+
+}
+
+@keyframes scaling {
+    0%, 100%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2)
+    }
+}
+
+.play-game-section .play-ico{
+    font-size: 3em;
+    color:#FB1349;
+}
+
+.play-game-section #play-btn{
+    border: none;
+    background-color: transparent;
+    font-size: 3em;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 5px;
+}
+
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+}
+
+.game-info-section{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.game-info-section #tip{
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.game-info-section .options{
+    display: flex;
+    gap: 10px;
+}
+
+.options .select-btn{
+    padding: 2px 50px;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: #072A40;
+    color:#FB1349;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+}
+
+
+.game-info-section .player-turn{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.game-board-wrapper{
+    background-color: #07476f;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+}
+
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    width: 300px; 
+    height: 300px; 
+    background-color: #07F3FB;
+}
+
+@media screen and (min-width: 501px) {
+    .game-board {
+      width: 400px;  
+      height: 320px; 
+    }
+}
+
+.game-board .box{
+    background-color: #07476f; 
+    border: none;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.winner-announcement{
+    font-size: 1.7em;
+    font-weight: 600;
+}
+
+#restart-btn{
+    padding: 2px 50px;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: #072A40;
+    color:#FFF;
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+}
+
+#restart-btn:hover{
+    background-color: #07476f;
+}

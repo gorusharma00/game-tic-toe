@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Toe Game</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="play-show">
+        <div class="play-game-section">
+            <i class='bx bx-play-circle play-ico'></i>
+            <button id="play-btn">Play</button>
+        </div>
+    </div>
+
+    <div class="game-container">
+
+        <div class="game-info-section">
+            <span id="tip">First Choose Your Player: </span>
+            <div class="options">
+                <button class="select-btn">X</button>
+                <button class="select-btn">O</button>
+            </div>
+            <span class="player-turn"></span>
+        </div>
+        
+        <div class="game-board-wrapper">
+            <div class="game-board">
+                
+                <button class="box" disabled></button>
+                <button class="box" disabled></button>
+                <button class="box" disabled></button>
+                <button class="box" disabled></button>
+                <button class="box" disabled></button>
+                <button class="box" disabled></button>
+                <button class="box" disabled></button>
+                <button class="box" disabled></button>
+                <button class="box" disabled></button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="footer">
+        <h2 class="winner-announcement"></h2>
+        <button id="restart-btn">Restart Game</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

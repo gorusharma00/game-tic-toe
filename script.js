@@ -89,6 +89,8 @@ function announceWinner(player = 'draw'){
     }else{
         winner.textContent = "Match Draw!!"
     }
+    document.querySelector('.player-turn').textContent = "";
+    BoxEnableOrDisable(true);
 }
 
 const restartBtn = document.getElementById('restart-btn');
@@ -99,13 +101,11 @@ function restart(){
     count = 0;
 
     boxes.forEach(box => box.textContent = "");
-    BoxEnableOrDisable(true);
 
     const winner = document.querySelector('.winner-announcement');
     winner.textContent = "";
 
     setDisableorEnable(signChooseBtn, false);
-    document.querySelector('.player-turn').textContent = "";
 
     signChooseBtn.forEach(btn => btn.style.borderBottom = 'none');
 }

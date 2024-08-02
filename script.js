@@ -106,4 +106,6 @@ function restart(){
 
     setDisableorEnable(signChooseBtn, false);
     document.querySelector('.player-turn').textContent = "";
+
+    signChooseBtn.forEach(btn => btn.style.borderBottom = 'none');
 }
